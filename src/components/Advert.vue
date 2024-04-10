@@ -1,32 +1,14 @@
 <template>
-  <div class="row">
-    <div class="col-sm-6" style="display: flex; align-items: flex-start;">
-      <div>
-        <p>Projektijuhtimine ei ole kunagi nii lihtne olnud</p>
+  <div class="border p-5">
+    <div class="row">
+      <div class="col-sm-6" style="display: flex; align-items: flex-start;">
+        <div>
+          <p>Projektijuhtimine ei ole kunagi nii lihtne olnud</p>
 
-      </div>
-      <div>
-        <img src="../assets/smile.webp" class="img-fluid" style="width: 600px; height: auto; margin-right: 20px;" />
-      </div>
-    </div>
-  </div><div class="row">
-    <div class="col-sm-6" style="display: flex; align-items: flex-start;">
-      <div>
-        <p>Jalgi projekti hetkeseisu visuaalselt</p>
-
-      </div>
-      <div>
-        <img src="../assets/smile.webp" class="img-fluid" style="width: 600px; height: auto; margin-right: 20px;" />
-      </div>
-    </div>
-  </div><div class="row">
-    <div class="col-sm-6" style="display: flex; align-items: flex-start;">
-      <div>
-        <p>Planeeri ylesandeid</p>
-
-      </div>
-      <div>
-        <img src="../assets/smile.webp" class="img-fluid" style="width: 600px; height: auto; margin-right: 20px;" />
+        </div>
+        <div>
+          <img src="../assets/project-management.png" class="img-fluid" style="width: 600px; height: auto; margin-right: 20px;"/>
+        </div>
       </div>
     </div>
   </div>
