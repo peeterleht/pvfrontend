@@ -1,21 +1,20 @@
+
 <template>
-  <div>
-    <div>
-      <FrontPageHeader/>
-    </div>
-    <div class="home">
-    </div>
-  </div>
+
 </template>
+
 
 <script>
 // @ is an alias to /src
 import FrontPageHeader from "@/components/FrontPageHeader.vue";
 
 export default {
-  name: 'HomeView',
+  name: "LoginView",
+
   components: {
     FrontPageHeader,
+
   }
 }
+
 </script>
