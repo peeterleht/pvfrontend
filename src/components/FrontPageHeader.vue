@@ -2,7 +2,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <img src="../assets/pv_logo.png" height="30">
+      <img src="../assets/pv_logo.png" style="width: 40px; height: 40px; margin-right: 20px;">
       <a class="navbar-brand" href="#">ProjektVisualiseeritud</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
