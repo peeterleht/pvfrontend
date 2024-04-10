@@ -1,5 +1,5 @@
 <template>
-MAKSUMUS
+  <div>MAKSUMUS</div>
 </template>
 
 <script setup>
