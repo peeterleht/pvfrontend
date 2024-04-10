@@ -24,7 +24,7 @@
                 </li>
               </ul>
               <form class="d-flex" role="search">
-                <button @click="LoginModal" class="btn btn-outline-success mx-3" type="submit">Logi sisse</button>
+                <button  class="btn btn-outline-success mx-3" type="submit">Logi sisse</button>
                 <button class="btn btn-outline-success" type="submit">Proovi</button>
               </form>
             </div>
@@ -35,5 +35,4 @@
 
 <script setup>
 
-import LoginModal from "@/components/modal/LoginModal.vue";
 </script>
