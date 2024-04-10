@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img src="../assets/pv_logo.png" class="mx-3" width="30">
-      <a class="navbar-brand me-3" href="#">ProjektVisualiseeritud</a>
+      <a class="navbar-brand me-3">ProjektVisualiseeritud</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
