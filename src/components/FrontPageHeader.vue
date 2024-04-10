@@ -1,10 +1,9 @@
 <template>
 
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
+
+           <img src="../assets/pv_logo.png">
             <a class="navbar-brand" href="#">ProjektVisualiseeritud</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -23,21 +22,18 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Tagasiside</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
               </ul>
               <form class="d-flex" role="search">
-                <button class="btn btn-outline-success" type="submit">Logi sisse</button>
+                <button @click="LoginModal" class="btn btn-outline-success mx-3" type="submit">Logi sisse</button>
+                <button class="btn btn-outline-success" type="submit">Proovi</button>
               </form>
             </div>
           </div>
         </nav>
-      </div>
-    </div>
-  </div>
+
 </template>
 
 <script setup>
 
+import LoginModal from "@/components/modal/LoginModal.vue";
 </script>
