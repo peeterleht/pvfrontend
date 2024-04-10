@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <img src="../assets/pv_logo.png" class="mx-3" width="30">
       <a class="navbar-brand me-3">ProjektVisualiseeritud</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" href="#" @click="scrollToAdvert">Võimalused</a>
