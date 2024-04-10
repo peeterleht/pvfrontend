@@ -1,24 +1,40 @@
 <template>
-  <div class="row">
-    <FrontPageHeader/>
-  </div>
-  <div class="row">
-    <Advert/>
-  </div>
-  <div class="row">
-    <Feedback/>
-  </div>
-  <div class="row">
-    <PaymentTier/>
-  </div>
-  <div class="row">
-    <ProjectExample/>
-  </div>
-  <div class="row">
-    <TryOut/>
-  </div>
-  <div class="row">
-    <FrontPageFooter/>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <FrontPageHeader/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <Advert/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <Feedback/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <PaymentTier/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ProjectExample/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <TryOut/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <FrontPageFooter/>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>

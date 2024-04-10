@@ -1,5 +1,5 @@
 <template>
-  <div>TAGASISIDE</div>
+  TAGASISIDE
 </template>
 
 <script setup>
