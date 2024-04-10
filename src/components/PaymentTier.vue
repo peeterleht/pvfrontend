@@ -1,5 +1,5 @@
 <template>
-  <div>MAKSUMUS</div>
+  MAKSUMUS
 </template>
 
 <script setup>
