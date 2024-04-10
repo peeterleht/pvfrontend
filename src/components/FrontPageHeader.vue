@@ -1,5 +1,5 @@
 <template>
-  <div>PÄIS</div>
+  PÄIS
 </template>
 
 <script setup>

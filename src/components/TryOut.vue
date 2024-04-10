@@ -1,5 +1,5 @@
 <template>
-  <div>PROOVI</div>
+  PROOVI
 </template>
 
 <script setup>

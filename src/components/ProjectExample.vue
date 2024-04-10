@@ -1,5 +1,5 @@
 <template>
-  <div>PROJEKTI NÄIDIS</div>
+  PROJEKTI NÄIDIS
 </template>
 
 <script setup>
