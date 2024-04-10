@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "daisyui": "^4.10.1"
   },
   "browserslist": [
     "> 1%",
