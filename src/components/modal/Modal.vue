@@ -1,11 +1,11 @@
 <template>
   <!-- Modal -->
   <div v-if="isOpen" class="modal-backdrop fade show d-block"/>
-  <FocusTrap v-if="isOpen" class="modal fade show" tabindex="-1" style="display: block">
+  <FocusTrap v-if="isOpen" class="modal fade show" tabindex="-1" style="display: block;">
     <div class="modal-dialog" ref="Modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5">Modal title</h1>
           <button @click="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
