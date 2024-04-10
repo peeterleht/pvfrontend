@@ -1,6 +1,18 @@
 <template>
   <router-view/>
+  <Modal/>
 </template>
+
+<script>
+
+import Modal from "@/components/modal/Modal.vue";
+
+export default {
+  name: 'App',
+  components: {Modal}
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -11,7 +23,7 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 50px;
 }
 
 nav a {
@@ -23,5 +35,3 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-<script setup>
-</script>
