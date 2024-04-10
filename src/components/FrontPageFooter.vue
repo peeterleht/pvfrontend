@@ -1,5 +1,5 @@
 <template>
-  <div>ALUMINE OSA</div>
+  ALUMINE OSA
 </template>
 
 <script setup>

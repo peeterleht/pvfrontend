@@ -1,5 +1,5 @@
 <template>
-  <div>REKLAAM</div>
+  REKLAAM
 </template>
 
 <script setup>
