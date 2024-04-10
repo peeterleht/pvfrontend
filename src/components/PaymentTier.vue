@@ -1,4 +1,4 @@
-<template>
+<template id="payment_tier">
   MAKSUMUS
 </template>
 
