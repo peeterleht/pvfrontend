@@ -1,5 +1,5 @@
 <template>
-Projektide näidised
+PROJEKTI NÄIDIS
 </template>
 
 <script setup>

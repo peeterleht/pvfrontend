@@ -1,5 +1,5 @@
 <template>
-Alumine osa
+ALUMINE OSA
 </template>
 
 <script setup>
