@@ -5,15 +5,21 @@
     <div class="modal-dialog" ref="Modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5"><!-- title --></h1>
+          <slot name="title">
+            <!-- Title-->
+          </slot>
           <button @click="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!-- body -->
+          <slot name="body">
+            <!-- body-->
+          </slot>
         </div>
         <div class="modal-footer">
           <button @click="closeModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button @click="closeModal" type="button" class="btn btn-primary">Logi sisse</button>
+          <slot name="buttons">
+            <!-- button -->
+          </slot>
         </div>
       </div>
     </div>
@@ -29,12 +35,12 @@ export default {
   components: {FocusTrap},
   data() {
     return {
-      isOpen: false
+      isOpen: true
     }
   },
   methods: {
     openModal() {
-      this.isOpen = false
+      this.isOpen = true
     },
 
     closeModal() {

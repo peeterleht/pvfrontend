@@ -1,15 +1,11 @@
 <template>
   <router-view/>
-  <Modal/>
 </template>
-
 <script>
-
-import Modal from "@/components/modal/Modal.vue";
 
 export default {
   name: 'App',
-  components: {Modal}
+  components: {}
 }
 </script>
 
