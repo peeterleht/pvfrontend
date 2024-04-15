@@ -2,30 +2,24 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <img src="../assets/pv_logo.png" style="width: 40px; height: 40px; margin-right: 20px;">
-      <a class="navbar-brand" href="#">ProjektVisualiseeritud</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <img src="../assets/pv_logo.png" class="mx-3" width="30">
+      <label class="navbar-brand me-3"><b>ProjektVisualiseeritud</b></label>
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Võimalused</a>
+            <a class="nav-link active" href="#" @click="scrollToAdvert">Võimalused</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Maksumus</a>
+            <a class="nav-link active" href="#" @click="scrollToPaymentTier">Maksumus</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Projektide näited</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Tagasiside</a>
+            <a class="nav-link active" href="#" @click="scrollToProjectExample">Projektide näited</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <button class="btn btn-outline-success mx-3" type="submit">Logi sisse</button>
-          <button class="btn btn-outline-success" type="submit">Proovi</button>
+        <form class="d-flex">
+          <button class="btn btn-outline-secondary mx-1" type="submit">Proovi</button>
+          <button class="btn btn-outline-secondary mx-1" type="submit">Registreeri</button>
+          <button class="btn btn-outline-dark mx-1" type="submit">Logi sisse</button>
         </form>
       </div>
     </div>
@@ -34,5 +28,22 @@
 </template>
 
 <script>
+export default {
+  name: 'FrontPageHeader',
+  components: {},
+  data() {
+  },
+  methods: {
+    scrollToAdvert() {
+      this.$emit("event-scroll-to-ref","advertRef")
+    },
+    scrollToPaymentTier() {
+      this.$emit("event-scroll-to-ref","paymentTierRef")
+    },
+    scrollToProjectExample() {
+      this.$emit("event-scroll-to-ref","projectExampleRef")
+    }
+  }
+}
 
 </script>

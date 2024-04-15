@@ -1,4 +1,4 @@
-<template>
+<template id="project_example">
   PROJEKTI NÄIDIS
 </template>
 
