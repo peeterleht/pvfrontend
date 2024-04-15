@@ -17,7 +17,7 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-outline-secondary mx-1" type="submit">Proovi</button>
+          <button @click="" class="btn btn-outline-secondary mx-1" type="submit">Proovi</button>
           <button class="btn btn-outline-secondary mx-1" type="submit">Registreeri</button>
           <button class="btn btn-outline-dark mx-1" type="submit">Logi sisse</button>
         </form>
