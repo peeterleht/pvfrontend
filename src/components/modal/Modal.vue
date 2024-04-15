@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     openModal() {
-      this.isOpen = true
+      this.isOpen = false
     },
 
     closeModal() {
