@@ -23,10 +23,10 @@ export default {
     showMessage(messageCode) {
       this.messageCode = messageCode
       if (this.messageCode === 1001) {
-        this.message = "Kasutajanimi või parool ei ole õige"
+        this.message = "Täida kõik väljad"
       }
       if (this.messageCode === 1002) {
-        this.message = "Teine sõnum"
+        this.message = "Kasutajanimi või parool ei ole õige"
       }
       if (this.messageCode === 1003) {
         this.message = "Kolmas sõnum"
