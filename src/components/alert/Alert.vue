@@ -18,7 +18,6 @@ export default {
       messageCode: 0,
       message: ''
     }
-
   },
   methods: {
     showMessage(messageCode) {
@@ -32,7 +31,8 @@ export default {
       if (this.messageCode === 1003) {
         this.message = "Kolmas sõnum"
       }
-      if (this.messageCode === 1004) {
+      if (this.messageCode === 2001) {
+        this.message = "Kasutaja on ok, aga sisse ei saa ;)"
       }
       setTimeout(this.resetAlertMessages, 4000)
     },
