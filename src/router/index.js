@@ -5,12 +5,12 @@ import ProjectView from "@/views/ProjectView.vue";
 const routes = [
   {
     path: '/',
-    name: 'frontPageRoute',
+    name: 'FrontPageRoute',
     component: FrontPageView
   },
   {
     path: '/project',
-    name: 'projectRoute',
+    name: 'ProjectViewRoute',
     component: ProjectView
   }
 ]

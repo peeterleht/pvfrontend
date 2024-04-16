@@ -11,6 +11,5 @@
   </div>
 </template>
 
-<script setup>
-import Advert from "@/components/Advert.vue";
+<script>
 </script>

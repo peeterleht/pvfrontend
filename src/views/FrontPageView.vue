@@ -50,7 +50,7 @@ import TryOut from "@/components/TryOut.vue";
 import FrontPageFooter from "@/components/FrontPageFooter.vue";
 
 export default {
-  name: 'LogInModal',
+  name: 'FrontPageView',
   components: {FrontPageFooter, TryOut, ProjectExample, PaymentTier, Feedback, Advert, FrontPageHeader},
   data() {
     return {
