@@ -18,7 +18,7 @@
     </div>
     <div class="row" style="margin-top: 100px; margin-bottom: 200px;">
       <div class="col col-3 text-start">
-        <H1>Võta kulutatud aega kontrolli alla</H1>
+        <H1>Võta projektis kulutatud aega kontrolli alla</H1>
       </div>
       <div class="col col-9">
         <img src="../assets/TimeLog.png" width="100%"/>
@@ -49,7 +49,7 @@ img {
 h1 {
   margin-top: 0;
   font-size: 24px;
-  font-family: "Artifakt Element Black",serif;
+  font-family: 'Artifakt Element Black',serif;
 }
 
 p {
