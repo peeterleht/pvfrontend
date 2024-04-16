@@ -8,7 +8,7 @@
       <div class="container text-start">
         <div class="row justify-content-center">
           <div class="col">
-            <Alert ref="messageRef"/>
+            <Alert ref="alertRef"/>
             <div class="mb-3">
               <label for="email" class="form-label">email</label>
               <input v-model="email" type="text" class="form-control" id="email">
@@ -58,6 +58,7 @@ export default {
       if (this.allFieldsWithCorrectInput()) {
         this.sendLoginRequest()
       } else {
+        this.$refs.alertRef.showMessage(1001)
       }
     },
 
@@ -75,9 +76,8 @@ export default {
       ).then(response => {
         this.loginResponse = response.data
         this.handleLoginRequestResponse()
-      }).catch(error => {
-        this.errorResponse = error.response.data
-        this.$refs.messageRef.showMessage(1001)
+      }).catch(() => {
+        this.$refs.alertRef.showMessage(1002)
       })
     },
 
