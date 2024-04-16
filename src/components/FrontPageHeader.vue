@@ -16,11 +16,11 @@
             <a class="nav-link active" href="#" @click="scrollToProjectExample">Projektide näited</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <button class="btn btn-outline-secondary mx-1" type="submit">Proovi</button>
-          <button class="btn btn-outline-secondary mx-1" type="submit">Registreeri</button>
-          <button @click="openLoginModal" class="btn btn-outline-dark mx-1" type="submit">Logi sisse</button>
-        </form>
+        <div class="d-flex">
+          <button @click="" class="btn btn-outline-secondary mx-1">Proovi</button>
+          <button @click="" class="btn btn-outline-secondary mx-1">Registreeri</button>
+          <button @click="openLoginModal" class="btn btn-outline-dark mx-1">Logi sisse</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -28,13 +28,14 @@
 </template>
 
 <script>
-import Modal from "@/components/modal/Modal.vue";
 import LoginModal from "@/components/modal/LoginModal.vue";
 
 export default {
   name: 'FrontPageHeader',
-  components: {LoginModal, Modal},
+  components: {LoginModal},
   data() {
+    return {
+    }
   },
   methods: {
     scrollToAdvert() {
