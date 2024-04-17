@@ -1,5 +1,5 @@
 <template>
-  <div v-if="messageCode >= 1000 && messageCode < 2000" class="alert alert-danger text-center" role="alert">
+  <div v-if="messageCode >= 1000 && messageCode < 2000" class="alert alert-danger text-center lh-sm" role="alert">
     {{ message }}
   </div>
   <div v-if="messageCode >= 2000 && messageCode < 3000" class="alert alert-success text-center" role="alert">
@@ -12,7 +12,7 @@ import FrontPageHeader from "@/components/FrontPageHeader.vue";
 
 export default {
   name: 'Alert',
-  components: {FrontPageHeader},
+  components: {},
   data() {
     return {
       messageCode: 0,
@@ -23,7 +23,7 @@ export default {
     showMessage(messageCode) {
       this.messageCode = messageCode
       if (this.messageCode === 1001) {
-        this.message = "Täida kõik väljad"
+        this.message = "Täida väljad email ja parool"
       }
       if (this.messageCode === 1002) {
         this.message = "Kasutajanimi või parool ei ole õige"

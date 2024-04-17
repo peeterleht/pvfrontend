@@ -76,8 +76,7 @@ export default {
       ).then(response => {
         this.loginResponse = response.data
         this.handleLoginRequestResponse()
-      }).catch(error => {
-        this.errorResponse = error.response.data
+      }).catch(() => {
         this.$refs.alertRef.showMessage(1002)
       })
     },
