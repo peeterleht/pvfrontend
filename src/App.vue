@@ -30,4 +30,10 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+@font-face {
+  font-family: 'Artifakt Element Black';
+  src: url('assets/Artifakt Element Black.ttf');
+}
+
 </style>
