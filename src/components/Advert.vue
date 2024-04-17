@@ -1,14 +1,27 @@
 <template>
-  <div class="border p-5">
-    <div class="row">
-      <div class="col-sm-6" style="display: flex; align-items: flex-start;">
-        <div>
-          <p>Projektijuhtimine ei ole kunagi nii lihtne olnud</p>
-
-        </div>
-        <div>
-          <img src="../assets/project-management.png" class="img-fluid" style="width: 600px; height: auto; margin-right: 20px;"/>
-        </div>
+  <div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+      <div class="col col-3 text-start">
+        <H1>Jälgi projekti hetkeseisu visuaalselt</H1>
+      </div>
+      <div class="col col-9">
+        <img src="../assets/ProjectView.png" width="100%"/>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+      <div class="col col-9">
+        <img src="../assets/ToDo.png" width="100%"/>
+      </div>
+      <div class="col col-3 text-end">
+        <H1>Vaata enda ülesandeid</H1>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+      <div class="col col-3 text-start">
+        <H1>Võta projektis kulutatud aega kontrolli alla</H1>
+      </div>
+      <div class="col col-9">
+        <img src="../assets/TimeLog.png" width="100%"/>
       </div>
     </div>
   </div>
@@ -36,6 +49,7 @@ img {
 h1 {
   margin-top: 0;
   font-size: 24px;
+  font-family: 'Artifakt Element Black',serif;
 }
 
 p {
