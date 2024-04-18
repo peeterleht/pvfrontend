@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="row">
-          <AddProject/>
+          <Projects/>
         </div>
       </div>
 
@@ -25,5 +25,5 @@
   </div>
 </template>
 <script setup>
-import AddProject from "@/components/project/AddProject.vue";
+import Projects from "@/components/project/Projects.vue";
 </script>
