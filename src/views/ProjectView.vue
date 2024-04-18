@@ -5,10 +5,9 @@
         sidebar
       </div>
       <div class="col col-9">
-
         <div class="row">
           <div class="col align-content-start">
-            <img src="../assets/pv_logo.png" width="50"/>
+            <img alt="" src="../assets/pv_logo.png" width="50"/>
             <label class="navbar-brand me-3">Firmanimi</label>
 
           </div>
