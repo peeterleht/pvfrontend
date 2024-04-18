@@ -41,13 +41,13 @@
 
 
 <script>
-import FrontPageHeader from "@/components/FrontPageHeader.vue";
-import Advert from "@/components/Advert.vue";
-import Feedback from "@/components/Feedback.vue";
-import PaymentTier from "@/components/PaymentTier.vue";
-import ProjectExample from "@/components/ProjectExample.vue";
-import TryOut from "@/components/TryOut.vue";
-import FrontPageFooter from "@/components/FrontPageFooter.vue";
+import FrontPageHeader from "@/components/frontpage/FrontPageHeader.vue";
+import Advert from "@/components/frontpage/Advert.vue";
+import Feedback from "@/components/frontpage/Feedback.vue";
+import PaymentTier from "@/components/frontpage/PaymentTier.vue";
+import ProjectExample from "@/components/frontpage/ProjectExample.vue";
+import TryOut from "@/components/frontpage/TryOut.vue";
+import FrontPageFooter from "@/components/frontpage/FrontPageFooter.vue";
 
 export default {
   name: 'FrontPageView',
