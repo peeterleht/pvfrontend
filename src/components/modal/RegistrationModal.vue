@@ -82,12 +82,12 @@ export default {
     addCompanyUserDetails() {
       this.userInfo.email = this.$refs.userInfoRef.email
       this.userInfo.password = this.$refs.userInfoRef.password
-      this.userInfo.username = this.$refs.userInfoRef.username
+      this.userInfo.userName = this.$refs.userInfoRef.userName
     },
 
     sendPostNewCompanyUser() {
       this.$http.post("/register/company/user", this.userInfo
-      ).then(response => {
+      ).then(()=> {
         let messageCode = 2002;
         this.$emit('event-user-registered-successfully', messageCode)
         this.$refs.modalRef.closeModal()
