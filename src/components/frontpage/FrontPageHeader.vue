@@ -1,5 +1,6 @@
 <template>
 <LoginModal ref="loginModalRef"/>
+  <RegistrationModal ref="RegistrationModalRef"/>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img src="../../assets/pv_logo.png" class="mx-3" width="30">
@@ -18,7 +19,7 @@
         </ul>
         <div class="d-flex">
           <button @click="" class="btn btn-outline-secondary mx-1">Proovi</button>
-          <button @click="" class="btn btn-outline-secondary mx-1">Registreeri</button>
+          <button @click="openRegistrationModal" class="btn btn-outline-secondary mx-1">Registreeri</button>
           <button @click="openLoginModal" class="btn btn-outline-dark mx-1">Logi sisse</button>
         </div>
       </div>
@@ -29,10 +30,11 @@
 
 <script>
 import LoginModal from "@/components/modal/LoginModal.vue";
+import RegistrationModal from "@/components/modal/RegistrationModal.vue";
 
 export default {
   name: 'FrontPageHeader',
-  components: {LoginModal},
+  components: {RegistrationModal, LoginModal},
   data() {
     return {
     }
@@ -49,6 +51,9 @@ export default {
     },
     openLoginModal() {
       this.$refs.loginModalRef.$refs.modalRef.openModal()
+    },
+    openRegistrationModal() {
+      this.$refs.RegistrationModalRef.$refs.modalRef.openModal()
     },
   }
 }
