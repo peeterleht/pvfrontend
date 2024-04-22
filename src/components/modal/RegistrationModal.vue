@@ -53,7 +53,7 @@ export default {
   components: {SubscriptionTypeDropdown, CompanyInfo, UserInfo, Alert, Modal},
   data() {
     return {
-      selectedAccountType: 'Vali kasutajatyyp',
+      selectedAccountType: 'Vali kasutajatüüp',
       selectedSubscriptionTypeId: 0,
       userInfo:
           {
