@@ -15,7 +15,8 @@ export default {
       subscriptionTypes:
           {
             subscriptionTypeId: 0,
-            subscriptionTypeTier: 0
+            subscriptionTypeTier: 0,
+            subscriptionTypeName: ''
           },
     }
   },

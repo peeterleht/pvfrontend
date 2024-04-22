@@ -90,7 +90,8 @@ export default {
       } else if (this.userInfo.roleId === 2) {
         this.addCompanyAdminDetails()
         this.addCompanyDetails()
-        this.userInfoExtended.subscriptionTypeId = this.$refs.subscriptionTypeDropdownRef.subscriptionTypes.subscriptionTypeId
+        this.userInfoExtended.subscriptionTypeId = 2
+        console.log('Extended User Info', this.userInfoExtended)
         this.sendPostNewCompanyAdmin()
       }
     },
@@ -101,6 +102,7 @@ export default {
       this.userInfo.username = this.$refs.userInfoRef.username
     },
     addCompanyAdminDetails() {
+      this.userInfoExtended.roleId = this.userInfo.roleId
       this.userInfoExtended.email = this.$refs.userInfoRef.email
       this.userInfoExtended.password = this.$refs.userInfoRef.password
       this.userInfoExtended.username = this.$refs.userInfoRef.username
@@ -127,8 +129,8 @@ export default {
       })
     },
     addCompanyDetails() {
-      this.userInfoExtended.companyname = this.$refs.companyInfoRef.companyInfo.companyname
-      this.userInfoExtended.logo = this.$refs.companyInfoRef.companyInfo.logo
+      this.userInfoExtended.companyname = this.$refs.companyInfoRef.companyname
+      this.userInfoExtended.logo = this.$refs.companyInfoRef.logo
     }
   },
 

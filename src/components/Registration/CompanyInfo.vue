@@ -14,11 +14,8 @@ export default {
   name: "CompanyInfo",
   data() {
     return{
-companyInfo:
-    {
       companyname: '',
-      logo: null
-    }
+      logo: ''
     }
   },
 }

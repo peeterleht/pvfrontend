@@ -19,12 +19,11 @@ export default {
   name: "UserInfo",
   data() {
     return {
-      userInfo:
-          {
+
             email: '',
             password: '',
             username: ''
-          },
+
     }
   },
 
