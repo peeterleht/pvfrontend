@@ -19,6 +19,9 @@
           <div class="row">
             <CompanyUsers/>
           </div>
+          <div class="row">
+            <font-awesome-icon @click="navigateToAddCompanyUser" :icon="['fas', 'plus']" size="2xl" />
+          </div>
         </div>
       </div>
     </div>
@@ -30,6 +33,11 @@ import CompanyUsers from "@/components/company/CompanyUsers.vue";
 
 export default {
   name: "CompanyView",
-  components: {CompanyUsers, Projects}
+  components: {CompanyUsers, Projects},
+  methods: {
+    navigateToAddCompanyUser() {
+      alert("todo: navigeerib addCompanyUser lehele")
+    },
+  }
 }
 </script>

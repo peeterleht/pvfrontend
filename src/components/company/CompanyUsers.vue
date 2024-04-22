@@ -10,13 +10,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Peeter</td>
-      <td>juunior</td>
-      <td>peeter@gmail.com</td>
-      <td>ei</td>
-      <td>aktiivne</td>
+    <tr v-for="companyUser in companyUsers" :key="companyUser.userEmail" >
+      <td>{{companyUser.userName}}</td>
+      <td>{{companyUser.projectRoleName}}</td>
+      <td>{{companyUser.userEmail}}</td>
+      <td>{{companyUser.hoursStatus}}</td>
+      <td>{{companyUser.userStatus}}</td>
     </tr>
 
     </tbody>
@@ -26,6 +25,38 @@
 
 <script>
 export default {
-  name: "CompanyUsers"
+  name: "CompanyUsers",
+  data() {
+    return{
+      companyId: Number(sessionStorage.getItem('companyId')),
+      companyUsers:[
+        {
+          userId: 0,
+          userEmail: '',
+          userName: '',
+          userStatus: '',
+          hoursStatus: '',
+          projectRoleName: ''
+        }
+      ]
+    }
+  },
+  methods: {
+    sendGetCompanyUsers() {
+      this.$http.get("/company/users", {
+            params: {
+              companyId: this.companyId
+            }
+          }
+      ).then(response => {
+        this.companyUsers = response.data
+      }).catch(error => {
+        const errorResponseBody = error.response.data
+      })
+    },
+  },
+  beforeMount() {
+    this.sendGetCompanyUsers()
+  }
 }
 </script>
