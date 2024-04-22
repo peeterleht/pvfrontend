@@ -29,18 +29,14 @@
 import Projects from "@/components/project/Projects.vue";
 import CompanyUsers from "@/components/company/CompanyUsers.vue";
 import CompanyHeader from "@/components/company/CompanyHeader.vue";
-import UserIconModal from "@/components/modal/UserIconModal.vue";
 
 export default {
   name: "CompanyView",
-  components: {UserIconModal, CompanyHeader, CompanyUsers, Projects},
+  components: {CompanyHeader, CompanyUsers, Projects},
   methods: {
     navigateToAddCompanyUser() {
       alert("todo: navigeerib addCompanyUser lehele")
     },
-    openUserIconModal() {
-
-    },
-  }
+    }
 }
 </script>

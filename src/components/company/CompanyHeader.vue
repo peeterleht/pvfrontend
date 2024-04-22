@@ -16,15 +16,11 @@
 </template>
 
 <script>
-import UserIconModal from "@/components/modal/UserIconModal.vue";
 import UserDropdown from "@/components/dropdown/UserDropdown.vue";
 
 export default {
   name: "CompanyHeader",
-  components: {UserDropdown, UserIconModal},
-  methods: {
-
-  }
+  components: {UserDropdown},
 }
 </script>
 
