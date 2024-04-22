@@ -25,5 +25,5 @@
   </div>
 </template>
 <script setup>
-import AddProject from "@/components/AddProject.vue";
+import AddProject from "@/components/project/AddProject.vue";
 </script>

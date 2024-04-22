@@ -8,7 +8,7 @@
   </template>
 
 <script>
-import FrontPageHeader from "@/components/FrontPageHeader.vue";
+import FrontPageHeader from "@/components/frontpage/FrontPageHeader.vue";
 
 export default {
   name: 'Alert',
