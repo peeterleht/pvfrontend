@@ -23,8 +23,3 @@ companyInfo:
   },
 }
 </script>
-
-
-<style scoped>
-
-</style>

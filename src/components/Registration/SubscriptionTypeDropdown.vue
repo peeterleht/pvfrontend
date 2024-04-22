@@ -11,13 +11,12 @@ export default {
   name: "SubscriptionTypeDropdown",
   data() {
     return {
-      selectedSubscriptionType: [],
-      subscriptionTypes: [
-        {
-          subscriptionTypeId: 0,
-          subscriptionTypeTier: 0
-        }
-      ]
+      selectedSubscriptionType: 0,
+      subscriptionTypes:
+          {
+            subscriptionTypeId: 0,
+            subscriptionTypeTier: 0
+          },
     }
   },
 

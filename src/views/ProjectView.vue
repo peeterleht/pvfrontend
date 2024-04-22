@@ -24,6 +24,7 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import AddProject from "@/components/project/AddProject.vue";
 </script>
