@@ -1,7 +1,7 @@
 <template>
   <select v-model="selectedSubscriptionType" @change="emitSubscriptionType" class="form-select">
     <option v-for="subscriptionType in subscriptionTypes" :value="subscriptionType.id" :key="subscriptionType.id">
-      {{ subscriptionType.id }}
+      {{ subscriptionType.name }}
     </option>
   </select>
 </template>

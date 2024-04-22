@@ -9,9 +9,10 @@
         <div class="row justify-content-center">
           <div class="col">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                Vali kasutajatüüp
+              <span>Vali kontotyyp</span>
+              <br>
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                {{selectedAccountType}}
               </button>
               <ul class="dropdown-menu">
                 <li><a @click="setRoleCompanyAdmin" class="dropdown-item" href="#">Firma admin</a></li>
@@ -25,6 +26,7 @@
 
             <div v-if="userInfo.roleId === 2">
               <CompanyInfo ref="companyInfoRef"/>
+              <span class="input-group-text">Vali konto tyyp</span>
               <subscription-type-dropdown ref="subscriptionTypeDropdownRef"
                                           @event-selected-subscription-type-change="setSelectedSubscriptionTypeId"/>
             </div>
@@ -51,6 +53,7 @@ export default {
   components: {SubscriptionTypeDropdown, CompanyInfo, UserInfo, Alert, Modal},
   data() {
     return {
+      selectedAccountType: 'Vali kasutajatyyp',
       selectedSubscriptionTypeId: 0,
       userInfo:
           {
@@ -75,9 +78,11 @@ export default {
 
     setRoleCompanyAdmin() {
       this.userInfo.roleId = 2
+      this.selectedAccountType = 'Firma Admin'
     },
     setRoleCompanyUser() {
       this.userInfo.roleId = 3
+      this.selectedAccountType = 'Tavakasutaja'
     },
     setSelectedSubscriptionTypeId(selectedSubscriptionTypeId) {
       this.selectedSubscriptionTypeId = selectedSubscriptionTypeId
@@ -90,7 +95,7 @@ export default {
       } else if (this.userInfo.roleId === 2) {
         this.addCompanyAdminDetails()
         this.addCompanyDetails()
-        this.userInfoExtended.subscriptionTypeId = 2
+        this.userInfoExtended.subscriptionTypeId = this.$refs.subscriptionTypeDropdownRef.selectedSubscriptionType
         console.log('Extended User Info', this.userInfoExtended)
         this.sendPostNewCompanyAdmin()
       }
@@ -121,7 +126,7 @@ export default {
     sendPostNewCompanyAdmin() {
       this.$http.post("/register/company/admin", this.userInfoExtended
       ).then(() => {
-        let messageCode = 2002;
+        let messageCode = 2003;
         this.$emit('event-user-registered-successfully', messageCode)
         this.$refs.modalRef.closeModal()
       }).catch(error => {
