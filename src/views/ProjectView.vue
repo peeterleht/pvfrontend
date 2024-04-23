@@ -5,16 +5,11 @@
         sidebar
       </div>
       <div class="col col-9">
-        <div class="row">
-          <div class="col align-content-start">
-            <img alt="" src="../assets/pv_logo.png" width="50"/>
-            <label class="navbar-brand me-3">Firmanimi</label>
 
-          </div>
-          <div class="col align-content-end">
-            <font-awesome-icon :icon="['fas', 'user']"/>
-          </div>
+        <div>
+          <company-header/>
         </div>
+
         <div class="row">
           <AddProject/>
         </div>
@@ -26,4 +21,5 @@
 
 <script setup>
 import AddProject from "@/components/project/AddProject.vue";
+import CompanyHeader from "@/components/company/CompanyHeader.vue";
 </script>
