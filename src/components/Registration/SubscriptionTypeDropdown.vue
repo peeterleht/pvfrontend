@@ -1,7 +1,7 @@
 <template>
   <select v-model="selectedSubscriptionType" @change="emitSubscriptionType" class="form-select">
     <option v-for="subscriptionType in subscriptionTypes" :value="subscriptionType.id" :key="subscriptionType.id">
-      {{ subscriptionType.id }}
+      {{ subscriptionType.name }}
     </option>
   </select>
 </template>
@@ -11,13 +11,13 @@ export default {
   name: "SubscriptionTypeDropdown",
   data() {
     return {
-      selectedSubscriptionType: [],
-      subscriptionTypes: [
-        {
-          subscriptionTypeId: 0,
-          subscriptionTypeTier: 0
-        }
-      ]
+      selectedSubscriptionType: 0,
+      subscriptionTypes:
+          {
+            subscriptionTypeId: 0,
+            subscriptionTypeTier: 0,
+            subscriptionTypeName: ''
+          },
     }
   },
 

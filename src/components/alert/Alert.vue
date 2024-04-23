@@ -36,7 +36,10 @@ export default {
           this.message = "Kasutaja on ok, aga sisse ei saa ;)"
           break;
         case 2002:
-          this.message = "Kasutaja registreeritu. Logi sisse.)"
+          this.message = "Kasutaja registreeritud. Logi sisse :)"
+          break;
+          case 2003:
+          this.message = "Firma admini kasutaja ja firma registreeritud. Logi sisse :)"
           break;
       }
       setTimeout(this.resetAlertMessages, 4000)
