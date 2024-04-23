@@ -46,14 +46,15 @@ import Modal from "@/components/modal/Modal.vue";
 import Alert from "@/components/alert/Alert.vue";
 import UserInfo from "@/components/Registration/UserInfo.vue";
 import CompanyInfo from "@/components/Registration/CompanyInfo.vue";
-import SubscriptionTypeDropdown from "@/components/Registration/SubscriptionTypeDropdown.vue";
+import SubscriptionTypeDropdown from "@/components/dropdown/SubscriptionTypeDropdown.vue";
+
 
 export default {
   name: "RegistrationModal",
   components: {SubscriptionTypeDropdown, CompanyInfo, UserInfo, Alert, Modal},
   data() {
     return {
-      selectedAccountType: 'Vali kasutajatyyp',
+      selectedAccountType: 'Vali kasutajatüüp',
       selectedSubscriptionTypeId: 0,
       userInfo:
           {
