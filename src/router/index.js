@@ -3,6 +3,7 @@ import FrontPageView from "@/views/FrontPageView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import CompanyView from "@/views/CompanyView.vue";
+import AddCompanyUsersView from "@/views/AddCompanyUsersView.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/company',
     name: 'CompanyViewRoute',
     component: CompanyView
+  },
+  {
+    path: '/new/company/user',
+    name: 'AddCompanyUsersViewRoute',
+    component: AddCompanyUsersView
   },
 
 ]
