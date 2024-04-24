@@ -97,6 +97,7 @@ export default {
       this.$emit('event-update-time-log-values',this.timeLogRequest)
       //todo: valideeri et kõik väljad on täidetud korrektselt
       this.sendPutTimelogRequest()
+      this.reloadPage()
     },
 
     sendPutTimelogRequest() {
@@ -111,6 +112,9 @@ export default {
       }).catch(error => {
         const errorResponseBody = error.response.data
       })
+    },
+    reloadPage(){
+      window.location.reload();
     },
     resetAllInputFields() {
       this.time = ''
