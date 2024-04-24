@@ -1,7 +1,7 @@
 <template>
   <Modal ref="modalRef">
     <template #title>
-      Muuda oma töötunde
+      Täienda oma töötunde
     </template>
     <template #body>
 
@@ -111,6 +111,11 @@ export default {
         const errorResponseBody = error.response.data
       })
     },
+    resetAllInputFields() {
+      this.time = ''
+      this.password = ''
+      this.messageCode = 0
+    }
 
   }
 }
