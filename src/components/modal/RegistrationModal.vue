@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
           <div class="col">
             <div class="dropdown">
-              <span>Vali kontotyyp</span>
+              <span>Vali kontotüüp</span>
               <br>
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                 {{selectedAccountType}}
