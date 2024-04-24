@@ -16,14 +16,14 @@
       </thead>
       <tbody>
       <tr v-for="userTimelog in userTimelogs" :key=userTimelogs.projectId>
-        <td>{{ userTimelog.userId }}</td>
-        <td>{{ userTimelog.projectId }}</td>
+        <td>{{ userTimelog.projectCode }}</td>
+        <td>{{ userTimelog.projectName }}</td>
         <td>{{ userTimelog.monday }}</td>
         <td>{{ userTimelog.tuesday }}</td>
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-       <td @click="handleEditIconClick" ><font-awesome-icon  :icon="['far', 'pen-to-square']"/></td>
+       <td @click="openTimeLogDataModal(userTimelog)" ><font-awesome-icon  :icon="['far', 'pen-to-square']"/></td>
       </tr>
       </tbody>
     </table>
@@ -44,8 +44,11 @@ export default {
       userId: Number(sessionStorage.getItem('userId')),
       userTimelogs: [
         {
+          timeLogId: 0,
           userId: 0,
           projectId: 0,
+          projectCode:'',
+          projectName:'',
           monday: 0,
           tuesday: 0,
           wednesday: 0,
@@ -69,11 +72,8 @@ export default {
         const errorResponseBody = error.response.data
       })
     },
-    openTimeLogDataModal() {
-      this.$refs.timeLogDataModalRef.$refs.modalRef.openModal()
-    },
-    handleEditIconClick() {
-      this.openTimeLogDataModal()
+    openTimeLogDataModal(userTimelog) {
+      this.$refs.timeLogDataModalRef.openTimeLogDataModal(userTimelog)
     },
   },
   beforeMount() {
