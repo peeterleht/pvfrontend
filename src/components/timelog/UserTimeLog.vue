@@ -1,6 +1,7 @@
 <template>
+  <TimeLogDataModal ref="timeLogDataModalRef"/>
   <div class="col-6">
-    <table class=table table-hover>
+    <table class="table table-hover">
       <thead>
       <tr>
         <th scope=col>Nr</th>
@@ -22,9 +23,7 @@
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-        <td><font-awesome-icon :icon="['far', 'floppy-disk']"/></td>
-        <td @click="" ><font-awesome-icon :icon="['far', 'pen-to-square']"/></td>
-
+       <td><font-awesome-icon @click="handleEditIconClick" :icon="['far', 'pen-to-square']"/></td>
       </tr>
       </tbody>
     </table>
@@ -34,15 +33,19 @@
 </template>
 
 <script>
+import Modal from "@/components/modal/Modal.vue";
+import TimeLogDataModal from "@/components/modal/TimeLogDataModal.vue";
+
 export default {
   name: "UserTimeLogs",
+  components: {TimeLogDataModal, Modal},
   data() {
     return {
       userId: Number(sessionStorage.getItem('userId')),
       userTimelogs: [
         {
-          userId: 2,
-          projectId: 1,
+          userId: 0,
+          projectId: 0,
           monday: 0,
           tuesday: 0,
           wednesday: 0,
@@ -65,6 +68,12 @@ export default {
       }).catch(error => {
         const errorResponseBody = error.response.data
       })
+    },
+    openTimeLogDataModal() {
+      this.$refs.timeLogDataModalRef.$refs.modalRef.openModal()
+    },
+    handleEditIconClick() {
+      this.openTimeLogDataModal()
     },
   },
   beforeMount() {

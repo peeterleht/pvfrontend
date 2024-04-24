@@ -10,15 +10,15 @@
           <div>
             <company-header/>
           </div>
-          <div>
-            <div class="row">
-              <CompanyUsers/>
-            </div>
 
-            <div class="row">
-              <font-awesome-icon @click="navigateToAddCompanyUser" :icon="['fas', 'plus']" size="2xl"/>
-            </div>
+          <div class="row">
+            <CompanyUsers/>
           </div>
+
+          <div class="row">
+            <font-awesome-icon @click="navigateToAddCompanyUser" :icon="['fas', 'plus']" size="2xl"/>
+          </div>
+
         </div>
       </div>
     </div>
@@ -37,6 +37,6 @@ export default {
     navigateToAddCompanyUser() {
       alert("todo: navigeerib addCompanyUser lehele")
     },
-  }
+    }
 }
 </script>
