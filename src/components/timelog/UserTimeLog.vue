@@ -1,10 +1,10 @@
 <template>
   <TimeLogDataModal ref="timeLogDataModalRef"/>
-  <div class="col-6">
+  <div class="col">
     <table class="table table-hover">
       <thead>
       <tr>
-        <th scope=col>Nr</th>
+        <th scope=col>Kood</th>
         <th scope=col>Projekt</th>
         <th scope=col>Esmaspäev</th>
         <th scope=col>Teisipäev</th>
@@ -16,16 +16,14 @@
       </thead>
       <tbody>
       <tr v-for="userTimelog in userTimelogs" :key=userTimelogs.projectId>
-        <td>{{ userTimelog.userId }}</td>
-        <td>{{ userTimelog.projectId }}</td>
+        <td>{{ userTimelog.projectCode }}</td>
+        <td>{{ userTimelog.projectName }}</td>
         <td>{{ userTimelog.monday }}</td>
         <td>{{ userTimelog.tuesday }}</td>
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-
-          <button @click="openTimeLogDataModal" ><font-awesome-icon :icon="['far', 'pen-to-square']"/></button>
-
+       <td @click="openTimeLogDataModal(userTimelog)" ><font-awesome-icon  :icon="['far', 'pen-to-square']" @event-update-time-log-values="sendGetTimelogs" /></td>
       </tr>
       </tbody>
     </table>
@@ -46,8 +44,11 @@ export default {
       userId: Number(sessionStorage.getItem('userId')),
       userTimelogs: [
         {
+          timeLogId: 0,
           userId: 0,
           projectId: 0,
+          projectCode:'',
+          projectName:'',
           monday: 0,
           tuesday: 0,
           wednesday: 0,
@@ -71,9 +72,12 @@ export default {
         const errorResponseBody = error.response.data
       })
     },
-    openTimeLogDataModal() {
-      this.$refs.timeLogDataModalRef.$refs.modalRef.openModal()
-    }
+    updateTimeLogInfo() {
+
+    },
+    openTimeLogDataModal(userTimelog) {
+      this.$refs.timeLogDataModalRef.openTimeLogDataModal(userTimelog)
+    },
   },
   beforeMount() {
     this.sendGetTimelogs()
