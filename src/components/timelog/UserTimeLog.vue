@@ -1,6 +1,6 @@
 <template>
   <TimeLogDataModal ref="timeLogDataModalRef"/>
-  <div class="col-6">
+  <div class="col">
     <table class="table table-hover">
       <thead>
       <tr>
@@ -23,7 +23,7 @@
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-       <td><font-awesome-icon @click="handleEditIconClick" :icon="['far', 'pen-to-square']"/></td>
+       <td @click="handleEditIconClick" ><font-awesome-icon  :icon="['far', 'pen-to-square']"/></td>
       </tr>
       </tbody>
     </table>
