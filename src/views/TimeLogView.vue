@@ -6,16 +6,12 @@
           sidebar
         </div>
         <div class="col col-9">
-
           <div>
             <company-header/>
           </div>
-
           <div class="row">
             <UserTimeLog/>
           </div>
-
-
         </div>
       </div>
     </div>

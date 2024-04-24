@@ -14,14 +14,19 @@
           <div>
             <div class="row">
               <div class="input-group mb-3">
-                <button @click="openCompanyUserModal; sendGetUsersByEmail;" class="btn btn-outline-secondary" type="button" id="button-addon1">Otsi kasutajat</button>
-                <input type="text" class="form-control" placeholder="Sisesta kasutaja email" aria-describedby="button-addon1">
+                <button @click="openCompanyUserModal; sendGetUsersByEmail" class="btn btn-outline-secondary"
+                        type="button" id="button-addon1">Otsi kasutajat
+                </button>
+                <input v-model="inputEmail" type="text" class="form-control" placeholder="Sisesta kasutaja email"
+                       aria-describedby="button-addon1">
               </div>
             </div>
 
-            <div class="row">
-              <font-awesome-icon :icon="['fas', 'plus']" size="2xl"/>
+            <div>
+
             </div>
+
+
           </div>
         </div>
       </div>
@@ -36,24 +41,28 @@ import CompanyUserModal from "@/components/modal/CompanyUserModal.vue";
 export default {
   name: "AddCompanyUsersView",
   components: {CompanyUserModal, CompanyHeader},
-  data(){
-    return{
-      inputEmail: ''
+  data() {
+    return {
+      inputEmail: '',
+      users: {
+        userId: 0,
+        email: '',
+        name: ''
+      }
     }
   },
-  methods:{
+  methods: {
     openCompanyUserModal() {
       this.$refs.companyUserModalRef.$refs.modalRef.openModal()
     },
     sendGetUsersByEmail() {
       this.$http.get("/company/find-user-by-email", {
             params: {
-              someRequestParam1: this.inputEmail
-
+              inputEmail: this.inputEmail
             }
           }
       ).then(response => {
-        const responseBody = response.data
+        this.users = response.data
       }).catch(error => {
         const errorResponseBody = error.response.data
       })

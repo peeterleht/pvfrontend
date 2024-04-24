@@ -44,7 +44,6 @@ export default {
     },
 
     closeModal() {
-  //    this.$emit('event-close-modal')
       this.isOpen = false
     }
 

@@ -23,7 +23,9 @@
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-       <td><font-awesome-icon @click="handleEditIconClick" :icon="['far', 'pen-to-square']"/></td>
+
+          <button @click="openTimeLogDataModal" ><font-awesome-icon :icon="['far', 'pen-to-square']"/></button>
+
       </tr>
       </tbody>
     </table>
@@ -71,10 +73,7 @@ export default {
     },
     openTimeLogDataModal() {
       this.$refs.timeLogDataModalRef.$refs.modalRef.openModal()
-    },
-    handleEditIconClick() {
-      this.openTimeLogDataModal()
-    },
+    }
   },
   beforeMount() {
     this.sendGetTimelogs()
