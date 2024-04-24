@@ -14,20 +14,21 @@
           <div>
             <div class="row">
               <div class="input-group mb-3">
-                <button @click="openCompanyUserModal; sendGetUsersByEmail" class="btn btn-outline-secondary"
+                <button @click="openCompanyUserModal" class="btn btn-outline-secondary"
                         type="button" id="button-addon1">Otsi kasutajat
                 </button>
-                <input v-model="inputEmail" type="text" class="form-control" placeholder="Sisesta kasutaja email"
+                <input v-model="userInput" type="text" class="form-control" placeholder="Sisesta kasutaja email"
                        aria-describedby="button-addon1">
               </div>
             </div>
-
-            <div>
-
-            </div>
-
-
           </div>
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Kasutaja</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="siia tuleb otsingust saadud kasutaja nimi ja email">
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -43,7 +44,7 @@ export default {
   components: {CompanyUserModal, CompanyHeader},
   data() {
     return {
-      inputEmail: '',
+      userInput: '',
       users: {
         userId: 0,
         email: '',
@@ -53,20 +54,9 @@ export default {
   },
   methods: {
     openCompanyUserModal() {
-      this.$refs.companyUserModalRef.$refs.modalRef.openModal()
+      this.$refs.companyUserModalRef.openCompanyUserModal(this.userInput)
     },
-    sendGetUsersByEmail() {
-      this.$http.get("/company/find-user-by-email", {
-            params: {
-              inputEmail: this.inputEmail
-            }
-          }
-      ).then(response => {
-        this.users = response.data
-      }).catch(error => {
-        const errorResponseBody = error.response.data
-      })
-    },
+
   }
 }
 </script>

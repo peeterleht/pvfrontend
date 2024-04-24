@@ -1,7 +1,7 @@
 <template>
   <TimeLogDataModal ref="timeLogDataModalRef"/>
   <div class="col">
-    <table class="table table-hover">
+    <table class="table table-hover" @event-update-time-log-values="sendGetTimelogs">
       <thead>
       <tr>
         <th scope=col>Kood</th>
@@ -77,6 +77,7 @@ export default {
     },
     openTimeLogDataModal(userTimelog) {
       this.$refs.timeLogDataModalRef.openTimeLogDataModal(userTimelog)
+
     },
   },
   beforeMount() {
