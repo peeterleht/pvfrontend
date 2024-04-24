@@ -94,6 +94,7 @@ export default {
     },
 
     updateTimeLog(){
+      this.$emit('event-update-time-log-values',this.timeLogRequest)
       //todo: valideeri et kõik väljad on täidetud korrektselt
       this.sendPutTimelogRequest()
     },

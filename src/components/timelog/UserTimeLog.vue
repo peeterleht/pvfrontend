@@ -4,7 +4,7 @@
     <table class="table table-hover">
       <thead>
       <tr>
-        <th scope=col>Nr</th>
+        <th scope=col>Kood</th>
         <th scope=col>Projekt</th>
         <th scope=col>Esmaspäev</th>
         <th scope=col>Teisipäev</th>
@@ -23,7 +23,7 @@
         <td>{{ userTimelog.wednesday }}</td>
         <td>{{ userTimelog.thursday }}</td>
         <td>{{ userTimelog.friday }}</td>
-       <td @click="openTimeLogDataModal(userTimelog)" ><font-awesome-icon  :icon="['far', 'pen-to-square']"/></td>
+       <td @click="openTimeLogDataModal(userTimelog)" ><font-awesome-icon  :icon="['far', 'pen-to-square']" @event-update-time-log-values="sendGetTimelogs" /></td>
       </tr>
       </tbody>
     </table>
@@ -71,6 +71,9 @@ export default {
       }).catch(error => {
         const errorResponseBody = error.response.data
       })
+    },
+    updateTimeLogInfo() {
+
     },
     openTimeLogDataModal(userTimelog) {
       this.$refs.timeLogDataModalRef.openTimeLogDataModal(userTimelog)
