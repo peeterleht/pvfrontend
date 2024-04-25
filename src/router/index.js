@@ -3,6 +3,8 @@ import FrontPageView from "@/views/FrontPageView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import CompanyView from "@/views/CompanyView.vue";
+import AddCompanyUsersView from "@/views/AddCompanyUsersView.vue";
+import TimeLogView from "@/views/TimeLogView.vue";
 
 const routes = [
   {
@@ -25,6 +27,17 @@ const routes = [
     name: 'CompanyViewRoute',
     component: CompanyView
   },
+  {
+    path: '/new/company/user',
+    name: 'AddCompanyUsersViewRoute',
+    component: AddCompanyUsersView
+  },
+  {
+    path: '/timelog',
+    name: 'TimeLogViewRoute',
+    component: TimeLogView
+  },
+
 
 ]
 
