@@ -28,6 +28,10 @@
               <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="siia tuleb otsingust saadud kasutaja nimi ja email">
             </div>
           </div>
+          <div class="mb-3 row">
+            <label for="roleDropdown" class="col-sm-2 col-form-label">Vali roll</label>
+            <role-dropdown ref="roleDropdownRef" @event-selected-project-role-change="setSelectedProjectRole"/>
+          </div>
 
         </div>
       </div>
@@ -38,12 +42,14 @@
 <script>
 import CompanyHeader from "@/components/company/CompanyHeader.vue";
 import CompanyUserModal from "@/components/modal/CompanyUserModal.vue";
+import RoleDropdown from "@/components/dropdown/RoleDropdown.vue";
 
 export default {
   name: "AddCompanyUsersView",
-  components: {CompanyUserModal, CompanyHeader},
+  components: {RoleDropdown, CompanyUserModal, CompanyHeader},
   data() {
     return {
+      selectedProjectRoleId: 0,
       userInput: '',
       users: {
         userId: 0,
@@ -56,7 +62,9 @@ export default {
     openCompanyUserModal() {
       this.$refs.companyUserModalRef.openCompanyUserModal(this.userInput)
     },
-
+    setSelectedProjectRole(selectedProjectRoleId) {
+      this.selectedProjectRoleId = selectedProjectRoleId
+    },
   }
 }
 </script>

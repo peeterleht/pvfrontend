@@ -1,5 +1,5 @@
 <template>
-  <select v-model="selectedProjectRole" @change="emitProjectRole" class="form-select">
+  <select v-model="selectedProjectRoleId" @change="emitProjectRole" class="form-select">
     <option v-for="projectRole in projectRoles" :value="projectRole.id" :key="projectRole.id">
       {{ projectRole.name }}
     </option>
@@ -11,18 +11,18 @@ export default {
   name: "RoleDropdown",
   data() {
     return {
-      selectedProjectRole: 0,
+      selectedProjectRoleId: 0,
       projectRoles:
           {
-            projectRoleId: 0,
-            projectRoleName: ''
+            id: 0,
+            name: ''
           },
     }
   },
 
   methods: {
     sendGetProjectRoles() {
-      this.$http.get("/subscriptionTypes")
+      this.$http.get("/project-roles")
           .then(response => {
             this.projectRoles = response.data
           })
@@ -30,13 +30,13 @@ export default {
             const errorResponseBody = error.response.data
           })
     },
-    emitSubscriptionType() {
-      this.$emit('event-selected-subscription-type-change', this.projectRoles.projectRoleId)
+    emitProjectRole() {
+      this.$emit('event-selected-project-role-change', this.selectedProjectRoleId)
     },
   },
 
   beforeMount() {
-    this.sendGetSubscriptionTypes()
+    this.sendGetProjectRoles()
   }
 
 }
@@ -44,8 +44,3 @@ export default {
 </script>
 
 
-<script>
-export default {
-
-}
-</script>

@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import FrontPageView from "@/views/FrontPageView.vue";
-import ProjectView from "@/views/ProjectView.vue";
+import ProjectView from "@/views/AddProjectView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import CompanyView from "@/views/CompanyView.vue";
 import AddCompanyUsersView from "@/views/AddCompanyUsersView.vue";
 import TimeLogView from "@/views/TimeLogView.vue";
+import AddProjectView from "@/views/AddProjectView.vue";
 
 const routes = [
   {
@@ -13,9 +14,9 @@ const routes = [
     component: FrontPageView
   },
   {
-    path: '/project',
-    name: 'ProjectViewRoute',
-    component: ProjectView
+    path: '/project/new',
+    name: 'AddProjectViewRoute',
+    component: AddProjectView
   },
   {
     path: '/projects',
