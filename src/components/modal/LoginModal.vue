@@ -85,7 +85,7 @@ export default {
       this.saveLoginResponseInfoToSessionStorage();
       this.resetAllInputFields()
       this.$refs.modalRef.closeModal()
-      router.push({name: 'ProjectViewRoute'})
+      router.push({name: 'ProjectsViewRoute'})
     },
 
     saveLoginResponseInfoToSessionStorage() {

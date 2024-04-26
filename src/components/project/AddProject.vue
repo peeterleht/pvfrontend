@@ -1,4 +1,6 @@
 <template>
+  <MainView ref="mainViewRef">
+    <template #contents>
   <div class="mb-3">
     <label for="projectCode" class="form-label">Projekti number</label>
     <input v-model="projectInfo.projectCode" type="text" class="form-control" id="projectCode">
@@ -16,12 +18,17 @@
     <input v-model="projectInfo.projectBankLink" type="text" class="form-control" id="projectBankLink">
   </div>
   <button @click="sendPostProject" class="btn btn-outline-dark">Add Project</button>
+    </template>
+  </MainView>
 </template>
 
 
 <script>
+import MainView from "@/views/MainView.vue";
+
 export default {
   name: "AddProject",
+  components: {MainView}
   data() {
     return {
       projectInfo: {
@@ -46,4 +53,6 @@ export default {
   }
 }
 
+</script>
+<script setup lang="ts">
 </script>
