@@ -29,8 +29,8 @@
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="roleDropdown" class="col-sm-2 col-form-label">Vali roll</label>
-            <role-dropdown ref="roleDropdownRef" @event-selected-project-role-change="setSelectedProjectRole"/>
+            <label for="roleDropdown" >Vali roll</label>
+            <role-dropdown ref="roleDropdownRef" placeholder="placeholder" @event-selected-project-role-change="setSelectedProjectRole"/>
           </div>
 
         </div>

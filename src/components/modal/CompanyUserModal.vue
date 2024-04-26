@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="user in users" :key="user.userId">
+        <tr v-for="user in users" :value="user" :key="user.userId">
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>
@@ -43,7 +43,11 @@ export default {
   },
   methods: {
     handleChooseUser(user) {
-      this.$emit('event-user-selected', user)
+      this.users.userId = user.userId
+      this.users.email = user.email
+      this.users.name = user.name
+      this.$emit('event-user-selected', this.users)
+      this.$refs.modalRef.closeModal()
     },
     openCompanyUserModal(userInput) {
       this.sendGetUsersByEmail(userInput)

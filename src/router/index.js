@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import FrontPageView from "@/views/FrontPageView.vue";
 import ProjectView from "@/views/MainView.vue";
 import CompanyView from "@/views/CompanyView.vue";
-import AddCompanyUsersView from "@/views/AddCompanyUsersView.vue";
 import Project from "@/components/project/Project.vue";
 import Projects from "@/components/project/Projects.vue";
 import UserTimeLog from "@/components/timelog/UserTimeLog.vue";
+import AddCompanyUser from "@/components/project/AddCompanyUser.vue";
 
 const routes = [
   {
@@ -36,7 +36,7 @@ const routes = [
   {
     path: '/new/company/user',
     name: 'AddCompanyUsersViewRoute',
-    component: AddCompanyUsersView
+    component: AddCompanyUser
   },
   {
     path: '/timelog',

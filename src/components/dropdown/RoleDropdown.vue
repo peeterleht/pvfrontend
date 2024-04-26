@@ -1,6 +1,6 @@
 <template>
   <select v-model="selectedProjectRoleId" @change="emitProjectRole" class="form-select">
-    <option v-for="projectRole in projectRoles" :value="projectRole.id" :key="projectRole.id">
+    <option v-for="projectRole in projectRoles" :value="projectRole.id" :key="projectRole.id" >
       {{ projectRole.name }}
     </option>
   </select>
