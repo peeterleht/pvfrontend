@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import FrontPageView from "@/views/FrontPageView.vue";
-import ProjectView from "@/views/AddProjectView.vue";
-import ProjectsView from "@/views/ProjectsView.vue";
+import ProjectView from "@/views/MainView.vue";
 import CompanyView from "@/views/CompanyView.vue";
 import AddCompanyUsersView from "@/views/AddCompanyUsersView.vue";
-import TimeLogView from "@/views/TimeLogView.vue";
-import AddProjectView from "@/views/AddProjectView.vue";
+import Project from "@/components/project/Project.vue";
+import Projects from "@/components/project/Projects.vue";
+import UserTimeLog from "@/components/timelog/UserTimeLog.vue";
 
 const routes = [
   {
@@ -14,14 +14,19 @@ const routes = [
     component: FrontPageView
   },
   {
-    path: '/project/new',
-    name: 'AddProjectViewRoute',
-    component: AddProjectView
+    path: '/project',
+    name: 'ProjectViewRoute',
+    component: ProjectView
   },
   {
     path: '/projects',
     name: 'ProjectsViewRoute',
-    component: ProjectsView
+    component: Projects
+  },
+  {
+    path: '/project',
+    name: 'ProjectViewRoute',
+    component: Project
   },
   {
     path: '/company',
@@ -36,7 +41,7 @@ const routes = [
   {
     path: '/timelog',
     name: 'TimeLogViewRoute',
-    component: TimeLogView
+    component: UserTimeLog
   },
 
 
